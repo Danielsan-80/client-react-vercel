@@ -1,0 +1,6 @@
+{
+    "rewrites": [
+        { "source": "/api/:path(.*)", "destination": "https://node-backend-api-ten.vercel.app/:path"},
+        { "source": "/(.*)", "destination": "/index.html" }
+    ]
+}

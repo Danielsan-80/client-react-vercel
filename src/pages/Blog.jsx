@@ -8,7 +8,7 @@ const Blog = () => {
 
 useEffect(()=>{
   const getPosts = async ()=> {
-    const res = await fetch('https://node-backend-api-ten.vercel.app/api/posts')
+    const res = await fetch('api/posts')
     const posts = await res.json()
    setPosts(posts)
   }
