@@ -1,0 +1,19 @@
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    place-content: center;
+    grid-gap: 30px;
+    
+
+}
+
+.title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 4rem;
+    text-align: center;
+    margin: 40px;
+    border-bottom: 1px solid orange;
+    letter-spacing: 0.15rem;
+}

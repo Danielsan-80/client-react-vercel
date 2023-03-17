@@ -1,0 +1,16 @@
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    
+
+}
+
+
+.title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+    text-align: center;
+    margin: 20px;
+    letter-spacing: 0.15rem;
+}

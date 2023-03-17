@@ -1,0 +1,40 @@
+
+.nav {
+    font-family: 'Bebas Neue', cursive;
+    display: flex;
+   justify-content: space-around;
+    align-items: center;
+    margin: 0 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: orange;
+}
+
+.logo span {
+    color: black;
+}
+
+
+
+.anchor {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.25rem;
+    padding: 10px;
+    color: black;
+    transition: background-color ease-in-out 400ms;
+    
+}
+
+.anchor[href="/login"], .anchor[href="/register"], .anchor[href="/logout"]  {
+
+   color: orange;
+}
+
+.anchor:hover {
+    background-color: #eee;
+}
+

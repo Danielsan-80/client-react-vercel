@@ -1,0 +1,24 @@
+
+
+.dotOne, .dotTwo, .dotThree {
+    font-size:clamp(3rem, 3vw + 3rem, 5rem);
+    animation: blink 1s ease-in-out infinite reverse;
+    
+}
+
+.dotTwo {
+   
+    animation-delay: 0.33s;
+   
+}
+
+.dotThree {
+   
+    animation-delay: 0.66s;
+}
+
+@keyframes blink {
+    to {
+        color: transparent;
+    }
+}

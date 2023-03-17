@@ -1,0 +1,66 @@
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    
+
+}
+
+.title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 4rem;
+    margin: 40px 10px 0 10px;
+    text-align: center;
+    border-bottom: 1px solid orange;
+    letter-spacing: 0.15rem;
+}
+
+.postDetails {
+    border-bottom: 1px solid orange;
+    font-size: 1rem;
+    font-family: 'Nunito', cursive;
+    padding: 15px 10px;
+    margin: 0px 10px 20px 10px;
+    gap: 5px;
+    background: rgb(241, 241, 241);
+    
+   
+}
+
+.postDetails p span {
+    font-weight: bold;
+    color: #fff;
+    background: orange;
+    padding: 3px 10px;
+    border-radius: 8px;
+   
+}
+
+
+
+.postImg img{
+   width:100%;
+   margin-bottom: 40px;
+}
+
+.postBody {
+    border-top: 1px solid orange;
+    font-size: 1.25rem;
+    font-family: 'Nunito', cursive;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 700px) {
+
+    .postDetails p span {
+        margin: 0 auto;
+        max-width: 200px;
+    }
+
+    .postDetails p span, .postDetails p {
+        display: block;
+        text-align: center;
+        
+    }
+}

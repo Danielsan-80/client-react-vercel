@@ -1,0 +1,108 @@
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    
+
+}
+
+.title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+    margin: 40px 10px 0 10px;
+    text-align: center;
+    border-bottom: 1px solid orange;
+    letter-spacing: 0.15rem;
+}
+
+table {
+    font-family: 'Nunito', cursive;
+    border-bottom: 1px solid orange;
+    margin: 20px 20px 0 20px;
+    text-align: center;
+
+}
+
+tr td:nth-child(1) {
+    width:25%;
+}
+tr td:nth-child(2) {
+    width:50%;
+}
+tr td:nth-child(4),  tr td:nth-child(5){
+    width:10%;
+}
+
+
+thead {
+    text-transform: uppercase;
+   
+    background: orange;
+}
+
+.headings {
+    padding: 5px 10px;
+    border-radius: 8px;
+    
+}
+
+td {
+    padding: 5px 10px;
+}
+
+.message {
+    font-family: 'Nunito', cursive;
+    border-bottom: 1px solid orange;
+    padding: 20px 0;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.dashboardButton {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1em;
+    padding: 4px 8px;
+    border: none;
+    background-color: orange;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all ease-in-out 500ms;
+}
+
+.dashboardButton:hover {
+    background-color: black;
+    color: orange;
+}
+
+.newPost {
+    cursor: pointer;
+    font-family: 'Bebas Neue', cursive;
+    color: black;
+    background: orange;
+    display: block;
+    max-width: 760px;
+    font-size: 1.5em;
+    border-bottom: 1px solid orange;
+    text-align: center;
+    border-radius: 8px;
+    margin: 10px auto;
+    padding: 10px 0;
+    transition: all ease-in-out 500ms;
+}
+
+.newPost:hover  {
+    background-color: black;
+    color: orange;
+}
+
+.update {
+    background: orange;
+    color: black;
+    transition: all ease-in-out 500ms;
+    
+}
+
+.update:hover {
+    background-color: black;
+    color: orange;
+}

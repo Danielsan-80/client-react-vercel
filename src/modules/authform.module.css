@@ -1,0 +1,66 @@
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    margin: 0 auto;
+    background: rgb(241, 241, 241);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 1px 1px 1px lightgray;
+    
+}
+
+form label {
+    font-family: 'Nunito', cursive;
+    font-weight: bold;
+    padding: 2px 0;
+
+}
+form input, select {
+    font-family: 'Nunito', cursive;
+    font-size: 1.15rem;
+    padding: 3px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    box-shadow: inset 1px 1px 1px lightgray;
+}
+
+option {
+    font-family: arial;
+}
+
+form button {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.25rem;
+   
+    padding: 4px 0;
+    border: none;
+    background-color: orange;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    letter-spacing: 0.10rem;
+    transition: all ease-in-out 500ms;
+}
+
+form button:hover {
+    background-color: black;
+    color: orange;
+}
+
+.error {
+    background: black;
+    opacity: 0.5;
+    text-align: center;
+    color: #fff;
+    padding: 2px 0;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-family: 'Nunito', cursive;
+    font-weight: bold;
+   
+}
+
