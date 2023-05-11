@@ -9,6 +9,8 @@ const Dashboard = () => {
   const {user} = useAuthContext()
   const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(true)
+  const regex = /(<([^>]+)>)/ig;
+  
   
   
   useEffect(()=>{
@@ -26,7 +28,7 @@ const Dashboard = () => {
 
     
     getPosts()
-  }, [posts])
+  }, [])
 
 
   const handleDelete = async(id)=>{
@@ -37,7 +39,7 @@ const Dashboard = () => {
 
   return (
     <div className={styles.container}>
-    <h1 className={styles.title}>{user.name} Dashboard</h1>
+    <h1 className={styles.title}>{user.name}'s Dashboard</h1>
 
     
     {posts.length != 0 ?  
@@ -52,8 +54,9 @@ const Dashboard = () => {
     <tbody>
       {posts.map(post=>(
         <tr key={post._id}>
-        <td>{post.title}</td>
-        <td>{post.body.substring(0,20)+'...'}</td>
+         
+         <td><Link to={'/blog/'+post._id}>{post.title} </Link> </td>
+        <td>{post.body.replace(regex, '').substring(0,20)+'...'}</td>
         <td>{Intl.DateTimeFormat("it-IT", {weekday: "long", month: "short", year: "numeric", day: "numeric"}).format(new Date(post.updatedAt))}</td>
         <td>       
         

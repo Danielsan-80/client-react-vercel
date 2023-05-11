@@ -2,16 +2,15 @@ import styles from '../modules/authform.module.css'
 import {useState} from 'react'
 import {useLocation, useNavigate} from 'react-router-dom'
 import {useAuthContext} from '../hooks/useAuthContext'
+import { Editor } from '@tinymce/tinymce-react'
 
 const PostForm = () => {
 
-  
-  
   const {user} = useAuthContext()
   const currLoc = useLocation()
   const navigate = useNavigate()
   const [title, setTitle] = useState('')
-  const [body, setBody] = useState('')
+  const [body, setBody] = useState(null)
   const [category, setCategory] = useState('travel')
   const [tags, setTags] = useState('')
   const [error, setError] = useState(null)
@@ -53,7 +52,31 @@ const PostForm = () => {
         <label>Title</label>
         <input type="text"  onChange={(e)=>setTitle(e.target.value)} value={title}/>
         <label>Body</label>
-        <input type="text"  onChange={(e)=>setBody(e.target.value)} value={body}/>
+        <Editor
+        //  onInit={(evt, editor) => editorRef.current = editor}
+        onChange={(evt, editor)=>{
+          setBody(editor.getContent())
+        }}
+         initialValue="<p>Write your content here.</p>"
+         init={{
+           height: 500,
+           menubar: true,
+           plugins: [
+             'advlist autolink lists link image charmap print preview anchor',
+             'searchreplace visualblocks code fullscreen',
+             'insertdatetime media table paste code help wordcount'
+           ],
+           toolbar: 'undo redo | formatselect | ' +
+           'bold italic backcolor | alignleft aligncenter ' +
+           'alignright alignjustify | bullist numlist outdent indent | ' +
+           'removeformat | help',
+           content_style: 'body { font-family:Montserrat, sans-serif; font-size:16px }'
+         }}
+       />
+
+
+
+        {/* <input type="text"  onChange={(e)=>setBody(e.target.value)} value={body}/> */}
         
         <label>Category:</label>
         <select name="category" onChange={(e)=>setCategory(e.target.value)} value={category}>

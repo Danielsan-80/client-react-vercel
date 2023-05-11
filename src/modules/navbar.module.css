@@ -29,7 +29,7 @@
     
 }
 
-.anchor[href="/login"], .anchor[href="/register"], .anchor[href="/logout"]  {
+.anchor[href="/login"], .anchor[href="/register"], .anchor[href="/dashboard"]  {
 
    color: orange;
 }

@@ -3,7 +3,6 @@
     max-width: 960px;
     margin: 0 auto;
     
-
 }
 
 .title {
@@ -37,14 +36,14 @@
 }
 
 
-
 .postImg img{
    width:100%;
-   margin-bottom: 40px;
+   padding: 0px 2% 20px 2%;
+   border-bottom: 1px solid orange;
 }
 
 .postBody {
-    border-top: 1px solid orange;
+    
     font-size: 1.25rem;
     font-family: 'Nunito', cursive;
     padding: 20px 10px;

@@ -39,9 +39,8 @@ const Post = () => {
     <img src="//unsplash.it/930/700"/>
     </div>
 
-    <div className={styles.postBody}>
-        <p>{post.body}</p>
-    </div>
+    <span className={styles.postBody} dangerouslySetInnerHTML={{ __html: post.body}} />
+        <div className="post-body"></div>
     
     </div>
   )

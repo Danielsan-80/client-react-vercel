@@ -1,6 +1,7 @@
 .container {
     max-width: 960px;
     margin: 0 auto;
+    padding: 0 10px;
     
 
 }
@@ -19,24 +20,26 @@ table {
     border-bottom: 1px solid orange;
     margin: 20px 20px 0 20px;
     text-align: center;
+    border-collapse: collapse;
 
 }
 
-tr td:nth-child(1) {
+td:nth-child(1) {
     width:25%;
+    
 }
-tr td:nth-child(2) {
+td:nth-child(2) {
     width:50%;
 }
-tr td:nth-child(4),  tr td:nth-child(5){
-    width:10%;
+td:nth-child(4), td:nth-child(5){
+    width:25%;
 }
 
 
 thead {
     text-transform: uppercase;
-   
     background: orange;
+    
 }
 
 .headings {
@@ -45,8 +48,9 @@ thead {
     
 }
 
-td {
+tr {
     padding: 5px 10px;
+    border-bottom: 1px solid orange;
 }
 
 .message {
@@ -60,7 +64,7 @@ td {
 .dashboardButton {
     font-family: 'Bebas Neue', cursive;
     font-size: 1em;
-    padding: 4px 8px;
+    padding: 8px 20px;
     border: none;
     background-color: orange;
     margin-top: 10px;

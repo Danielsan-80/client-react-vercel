@@ -25,7 +25,10 @@ const Navbar = () => {
         <Link to="" className={styles.anchor}>Contact</Link>
         {!user && (<Link to="/login" className={styles.anchor}>Log In</Link>)}
         {!user && (<Link to="/register" className={styles.anchor}>Register</Link>)}  
-        {user && <Link to="/login" className={styles.anchor} onClick={handleLogout}>Logout</Link>}
+        {user && <><Link to="/login" className={styles.anchor} onClick={handleLogout}>Logout</Link>
+        <Link to="/dashboard" className={styles.anchor}>Dashboard</Link>
+        </>
+        }
       </div>
 
     </nav>
