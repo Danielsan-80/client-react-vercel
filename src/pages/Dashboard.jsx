@@ -28,7 +28,7 @@ const Dashboard = () => {
 
     
     getPosts()
-  }, [])
+  }, [posts])
 
 
   const handleDelete = async(id)=>{
