@@ -11,6 +11,7 @@ const PostForm = () => {
   const navigate = useNavigate()
   const [title, setTitle] = useState('')
   const [body, setBody] = useState(null)
+  const [file, setFile] = useState(null)
   const [category, setCategory] = useState('travel')
   const [tags, setTags] = useState('')
   const [error, setError] = useState(null)
@@ -21,14 +22,23 @@ const PostForm = () => {
     if(currLoc.pathname === '/create') {
       
       const postTags = tags.split(',');
+
+      const formData = new FormData()
+      formData.append('title', title)
+      formData.append('body', body)
+      formData.append('featuredImg', file)
+      formData.append('category', category)
+      formData.append('tags', postTags)
+      formData.append('email', user.email)
+      formData.append('token', user.token)
       
       const res = await fetch('/api/posts', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          
           'Authorization': 'Bearer '+user.token
         },
-        body: JSON.stringify({email:user.email, title, body, category, tags: postTags})
+        body: formData
       })
 
       const json = await res.json()
@@ -77,6 +87,11 @@ const PostForm = () => {
 
 
         {/* <input type="text"  onChange={(e)=>setBody(e.target.value)} value={body}/> */}
+
+        <label>Image:</label>
+        <div className="form-fields">
+        <input type="file" onChange={(e)=>setFile(e.target.files[0])} name="featured_img"></input>
+        </div>
         
         <label>Category:</label>
         <select name="category" onChange={(e)=>setCategory(e.target.value)} value={category}>

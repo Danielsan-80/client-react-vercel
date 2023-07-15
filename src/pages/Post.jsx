@@ -8,6 +8,17 @@ const Post = () => {
     const [post, setPost] = useState({});
     const [author, setAuthor] = useState({});
     const [date, setDate]= useState('');
+    const [featuredImg, setFeaturedImg] = useState('')
+
+    function arrayBufferToBase64(buffer) {
+      let binary = '';
+      let bytes = new Uint8Array(buffer);
+      let len = bytes.byteLength;
+      for (let i = 0; i < len; i++) {
+          binary += String.fromCharCode(bytes[i]);
+      }
+      return window.btoa(binary);
+  }
 
     useEffect(()=>{
 
@@ -17,6 +28,7 @@ const Post = () => {
         setPost(post)
        setAuthor(post.author)
        setDate(Intl.DateTimeFormat("it-IT", {weekday: "long", month: "short", year: "numeric", day: "numeric"}).format(new Date(post.createdAt)))
+       setFeaturedImg(post.featuredImg)
       
       
 
@@ -36,7 +48,9 @@ const Post = () => {
     </div>
    
     <div className={styles.postImg} >
-    <img src="//unsplash.it/930/700"/>
+    {featuredImg ? <img src={`data:image/jpg;base64,${arrayBufferToBase64(featuredImg.data)}`} /> :
+      <img src="//unsplash.it/930/700"/>
+      }
     </div>
 
     <span className={styles.postBody} dangerouslySetInnerHTML={{ __html: post.body}} />
