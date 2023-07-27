@@ -17,9 +17,18 @@ useEffect(()=>{
       },
       body: JSON.stringify({searchTerm: searchParams.get('term')})
     })
+
+    if(!res.ok){
+      const error = await res.json()
+      setPosts(null)
+      setError(error)
+      return
+   
+    }
   
     const posts = await res.json()
     setPosts(posts)
+    setError(null)
   }
 
   getPosts()
@@ -30,13 +39,13 @@ useEffect(()=>{
   return (
     <>
     <h1 className={styles.title}>Search Results for: {searchParams.get('term')}</h1>
-    
+    {error && <p>{error.error}</p>}
     <div className={styles.container}>
-         {posts && posts.map((post)=>(
-            <BlogCard key={post._id} post={post} />
-        ))}
-        
+    {posts && posts.map((post)=>(
+       <BlogCard key={post._id} post={post} />
+   ))}
     </div>
+    
     </>
   )
 }
