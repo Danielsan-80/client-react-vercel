@@ -40,7 +40,6 @@ useEffect(()=>{
         {error ? <p>{error.error}</p> : posts.map((post)=>(
             <BlogCard key={post._id} post={post} />
         ))}
-        {/* {posts && }  */}
         
     </div>
     </>
