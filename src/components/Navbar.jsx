@@ -1,6 +1,7 @@
 import styles from '../modules/navbar.module.css'
 import { useAuthContext } from '../hooks/useAuthContext'
 import {Link, useNavigate} from 'react-router-dom'
+import SearchForm from './SearchForm'
 
 const Navbar = () => {
   const navigate = useNavigate()
@@ -29,6 +30,10 @@ const Navbar = () => {
         <Link to="/dashboard" className={styles.anchor}>Dashboard</Link>
         </>
         }
+      </div>
+
+      <div>
+        <SearchForm /> 
       </div>
 
     </nav>

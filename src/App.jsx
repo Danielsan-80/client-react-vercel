@@ -3,6 +3,7 @@ import { useAuthContext } from './hooks/useAuthContext'
 import Layout from './components/Layout'
 import Landing from './pages/Landing'
 import Blog from './pages/Blog'
+import Search from './pages/Search'
 import Post from './pages/Post'
 import Login from './pages/Login'
 import Register from './pages/Register'
@@ -22,6 +23,7 @@ const App = () => {
     
       <Route path="/" element={<Landing />}/>
       <Route path="/blog" element={<Blog />}/>
+      <Route path="/search" element={<Search />}/>
       <Route path="/create" element={user?<Create />:<Navigate to="/login" replace />}/>
       <Route path="/login" element={!user ?<Login /> : <Navigate to="/dashboard" replace />}/>
       <Route path="/register" element={!user ? <Register /> : <Navigate to="/dashboard" replace />}/>
