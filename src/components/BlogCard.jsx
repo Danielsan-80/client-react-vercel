@@ -19,7 +19,7 @@ const BlogCard = ({post}) => {
   return (
     <Link to={'/blog/'+post._id}><div className={styles.postCard}>
       <div className={styles.cardImg}>
-       {featuredImg ? <img src={`data:image/jpg;base64,${arrayBufferToBase64(featuredImg.data)}`} width="300px"/>
+       {featuredImg ? <img src={`data:image/jpg;base64,${arrayBufferToBase64(featuredImg.data)}`} width="300px" height="300px" style={{objectFit: 'cover', objectPosition: 'center'}}/>
         : <img src="//unsplash.it/300/300" />
         }
       </div>

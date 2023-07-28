@@ -3,8 +3,8 @@
 
 
 .postCard {
-    min-width: 300px;
-    min-height: 300px;
+    width: 300px;
+    height: 300px;
     margin: 0 auto;
     position: relative;
     cursor: pointer;
@@ -15,20 +15,23 @@
 .postCard h1 {
     font-family: 'Bebas Neue', cursive;
     transform: scale(0);
+    text-align: center;
     color: #fff;
+    text-shadow: 0 1px 0 black;
     transition: ease-in-out 500ms;
     opacity: 0;
     font-size: 2rem;
     letter-spacing: 0.15rem;
-    text-shadow: black 1px 1px 1px;
+    
 }
 
 .postDetails {
     font-family: 'Nunito', cursive;
+    width: 250px;
+    margin: 0 auto;
     padding: 5px 10px;
     color: #fff;
     background: rgba(0, 0, 0, 0.5);
-    /* background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent); */
     opacity: 0;
     font-size: 1rem;
     transform: scale(0);
@@ -44,7 +47,6 @@ i {
 }
 
 .postCard .cardImg {
-    
     position: absolute;
     transition: ease-in-out 500ms;
 }
@@ -69,6 +71,6 @@ i {
 }
 
 .postCard:hover .cardImg {
-    opacity: 0.8;
+    filter: brightness(85%);
     
 }
